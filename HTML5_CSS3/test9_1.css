@@ -1,0 +1,6 @@
+#nav{width: 100%; font-size: 12px; background: #004183;}
+.navwrap{width: 978px; height: 40px; margin: 0 auto;background: maroon;}
+ul{width: 898px;height: 40px; margin: 0; padding: 0 0 0 130px;list-style: none;}
+li{float: left;}
+a{line-height: 40px; font-weight: bold; margin: 0 10px; color: #fff; text-decoration: none;}
+a:hover{color: #ff3d3d}

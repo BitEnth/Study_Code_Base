@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CheckBox and Radio</title>
+    <style type="text/css">
+        fieldset{width: 300px; height: 120px; border: 2px double #003399; padding-left: 30px;}
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Please input personal information</legend>
+            Name:<input type="text" name="nm" maxlength="10" size="10"/><br/>
+            Hobby:<input type="checkbox" name="h1" value="read"/>reading
+                <input type="checkbox" name="h2" value="sing"/>sing
+                <input type="checkbox" name="h3" value="game" checked="checked"/>game<br/>
+            Sex:<input type="radio" name="sex" value="male" checked="checked"/>male
+                <input type="radio" name="sex" value="female"/>female
+        </fieldset>
+    </form>
+</body>
+</html>

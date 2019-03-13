@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Three Buttons</title>
+    <style type="text/css">
+        input{width: 100px; height: 25px;}
+        body{text-align: center;}
+        fieldset{width: 400px; height: 180px;}
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Input the information of user</legend>
+            User:<input type="text" name="username" size="10"/>
+            password:<input type="password" name="psw" size="10"/><br/>
+            <input type="submit" name="submit" value="sign up"/>
+            <input type="reset" name="reset" value="clear"/>
+            <input type="button" name="button" value="register" onclick="javascript:alert('register as new user');"/>
+        </fieldset>
+    </form>
+</body>
+</html>

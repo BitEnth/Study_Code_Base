@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>H5 new form</title>
+    <style type="text/javascript" src="html5shiv".js></style>
+</head>
+<body>
+    <form oninput="sum.value=parseInt(num1, value)+parseInt(num2.value)">
+        0<input type="range" id="num1" value="50" min="0" max="100"/>
+        +<input type="number" id="num2" value="50"/>
+        =<output id="sum" name="sum" for="num1 num2"></output>
+    </form>
+</body>
+</html>

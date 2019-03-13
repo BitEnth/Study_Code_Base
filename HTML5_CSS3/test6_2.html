@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Properties selector</title>
+    <style type="text/css">
+        [title]{font-size: 18px;color: green;}
+        p[name="chu"]{font-style: italic;}
+        p[name~="chu"]{font-weight: bold;}
+        p[name^="chu"]{text-align: center;}
+        p[name|="huang"]{font-weight: bolder;}
+        p[name$="jiu"]{color: blue;}
+        p[name*="jiang"]{color: red;text-decoration: underline;}
+    </style>
+</head>
+<body>
+    <h3>Properties selector</h3>
+    <p title="p1" name="chu">18px, green, italic, bold and center</p>
+    <p name="jiu chu">bold</p>
+    <p name="lin chu jiu">blue</p>
+    <p name="huang-he chang-jiang">red, overline and underline</p>
+</body>
+</html>

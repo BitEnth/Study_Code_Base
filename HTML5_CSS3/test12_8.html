@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 animation</title>
+    <style>
+        div{width: 100px; height: 100px;background-color: red; position: relative;
+            animation: mymove 5s; color: white; -moz-animation: mymove 5s infinite;}
+        @-moz-keyframes mymove {
+            from, 0% {left: 0px; background-color: red; top: 0px;}
+            50% {left: 100px; background-color: green; top: 100px;}
+            to, 100% {left: 200px; background-color: blue; top: 200px;}
+        }
+        }
+    </style>
+</head>
+<body>
+    <h3>CSS3 Animation</h3>
+    <div>I'm running</div>
+</body>
+</html>

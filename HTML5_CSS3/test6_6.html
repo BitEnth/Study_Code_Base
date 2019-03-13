@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inherit stylesheet</title>
+    <style type="text/css">
+        body{font-size: 12px;}
+        .c1{font-size: 28px;color: blue;font-family: BiauKai;}
+        #p1, #p2{font-family: "Century Schoolbook L";font-size: 36px;}
+    </style>
+</head>
+<body>
+    this is some content of body.
+    <p>paragraph style from body</p>
+    <p class="c1">class style from body & paragraph</p>
+    <p class="c1" id="p1">id style from class, paragraph and class</p>
+    <p class="c1" id="p2" style="font-family: 'Droid Sans Mono Slashed';color: red;">the most prior</p>
+</body>
+</html>
