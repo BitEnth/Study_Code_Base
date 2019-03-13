@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The application of array</title>
+</head>
+<body>
+    <h3>Array in javascript</h3>
+    <script type="text/javascript">
+        var stu1 = new Array("Harden", "Tony", "Pick", "Pony");
+        document.write("Elements in array: <br/>");
+        for(var i=0;i<=stu1.length-1;i++){
+            document.write(i+". "+stu1[i]+"\t");
+        }
+        document.write("<br/>"+stu1.join(';')+"<br/>");
+        document.write("The last one: "+stu1.pop()+" is deleted.<br/>");
+        stu1.push("Frank", "Yoo");
+        document.write(stu1.join(" ")+"<br/>");
+        document.write("The first element: "+stu1.shift()+" is deleted.<br/>");
+        stu1.unshift("Guuci");
+        document.write(stu1.join("~"));
+    </script>
+</body>
+</html>

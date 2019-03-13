@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Click</title>
+    <script type="text/javascript">
+        function $(id) {
+            return document.getElementById(id);
+        }
+        function copyText() {
+            $("target").value = $("source").value;
+        }
+        function shows() {
+            alert("You asshole!");
+        }
+    </script>
+</head>
+<body>
+    <h4>Copy clipboard</h4>
+    <form method="post" action="">
+        Source text: <input type="text" id="source" value=""/><br/>
+        Target text: <input type="text" id="target" readonly/><br/>
+        <input type="button" value="copy the content" onclick="copyText()" ondblclick="shows()"/>
+    </form>
+</body>
+</html>

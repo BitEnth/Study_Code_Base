@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas Circle</title>
+</head>
+<body>
+    <canvas id="oneCanvas" width="300" height="300" style="background-color: #F0F0F0;"></canvas>
+    <script type="text/javascript">
+        var myCanvas = document.getElementById("oneCanvas");
+        var context = myCanvas.getContext("2d");
+        context.beginPath();
+        context.arc(150, 150, 100, 0, Math.PI*2,true);
+        context.closePath();
+        context.fillStyle = "rgba(255,0,0,0.75)";
+        context.fill();
+        context.strokeStyle = "rgba(0,255,0,0,0.5)";
+        context.lineWidth = 20;
+        context.stroke();
+    </script>
+</body>
+</html>

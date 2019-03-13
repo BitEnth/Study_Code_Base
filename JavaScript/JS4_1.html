@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create new node</title>
+    <script type="text/javascript">
+        function createP() {
+            var newP = document.createElement("p");
+            var ptext = document.createTextNode("Hello world!");
+            newP.appendChild(ptext);
+            document.forms[0].appendChild(newP);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="button" value="Click to create new node" onclick="createP()"/>
+    </form>
+</body>
+</html>

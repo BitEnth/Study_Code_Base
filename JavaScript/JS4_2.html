@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remove, insert and replace nodes</title>
+    <script type="text/javascript">
+        function $tag(tag_name) {
+            return document.getElementsByTagName(tag_name);
+        }
+        function operateNode() {
+            var p=$tag('p')[0];
+            document.form1.removeChild(p);
+            var h5=document.createElement("h5");
+            var htext=document.createTextNode("Web front technique@h5");
+            h5.appendChild(htext);
+            var h2=$tag('h2')[0];
+            document.form1.replaceChild(h5, h2);
+            var newp=document.createElement('p');
+            var ptext=document.createTextNode("Dawn of man@np");
+            newp.appendChild(ptext);
+            document.form1.insertBefore(newp, $tag('b')[0]);
+        }
+    </script>
+</head>
+<body>
+    <form name="form1">
+        <h2>Javascript Programming@h2</h2>
+        <p>Hello world@p</p>
+        <b>World of mine@b</b><br/>
+        <input type="button" value="click to place nodes" onclick="operateNode()"/>
+    </form>
+</body>
+</html>

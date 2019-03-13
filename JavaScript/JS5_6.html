@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas Line</title>
+</head>
+<body>
+    <canvas id="oneCanvas" width="800" height="600" style="background-color: #F0F0F0"></canvas>
+    <script type="text/javascript">
+        var myCanvas = document.getElementById("oneCanvas");
+        var context = myCanvas.getContext("2d");
+        context.strokeStyle = "rgb(250,0,0)";
+        context.fillStyle = "rgb(250,0,0)";
+        context.moveTo(10,10);
+        context.lineTo(10,150);
+        context.moveTo(10,150);
+        context.lineTo(100, 180);
+        context.lineTo(200,10);
+        context.lineTo(400,100);
+        context.lineWidth = 8;
+        context.stroke();
+        var grad = context.createLinearGradient(50,280,400,50);
+        grad.addColorStop(0,"#FF0000");
+        grad.addColorStop(1,"#00FF00");
+        context.fillStyle = grad;
+        context.fillRect(50,280,400,50);
+    </script>
+</body>
+</html>

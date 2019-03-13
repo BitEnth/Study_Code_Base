@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Location</title>
+    <script type="text/javascript">
+        function currentLoc() {
+            alert(window.location);
+        }
+        function newLoc() {
+            location.assign("https://www.baidu.com");
+        }
+    </script>
+</head>
+<body>
+    <input type="button" onclick="currentLoc()" value="Current URL"/>
+    <input type="button" onclick="newLoc()" value="to New URL"/>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For cycle</title>
+</head>
+<body>
+    <script type="text/javascript">
+        for(var i=1,sum_1=0;i<=100;i++)
+        {
+            sum_1 = sum_1 + i;
+        }
+        document.write("for 1+2+...+100 = "+sum_1+"<br/>");
+        var j=1,sum_2=0;
+        while(j<=100)
+        {
+            sum_2 = sum_2 + j;
+            j += 1;
+        }
+        document.write("while 1+2+...+100 = "+sum_2+"<br/>");
+        var k=1,sum_3=0;
+        do {
+            sum_3 = sum_3 + k;
+            k++;
+        }while (k<=100)
+        document.write("do while 1+2+...+100 = "+sum_3);
+    </script>
+</body>
+</html>

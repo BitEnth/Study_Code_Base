@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas rectangle</title>
+</head>
+<body>
+    <canvas id="oneCanvas" width="" height="" style="border: 1px solid blue"></canvas>
+    <script type="text/javascript">
+        var myCanvas = document.getElementById("oneCanvas");
+        var conText = myCanvas.getContext("2d");
+        conText.fillStyle = "#00FF00";
+        conText.fillRect(0,0,200,100);
+        conText.strokeStyle = "#FF0000";
+        conText.lineWidth = 8;
+        conText.strokeRect(0,0,200,100);
+    </script>
+</body>
+</html>

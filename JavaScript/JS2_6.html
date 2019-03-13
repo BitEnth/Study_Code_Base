@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pull-down menu</title>
+    <script language="JavaScript">
+        function $(id) {
+            return document.getElementById(id);
+        }
+        function change() {
+            var index=$("game").selectedIndex;
+            $("show").src=$("game").options[index].value;
+        }
+    </script>
+</head>
+<body>
+    <div align="center">
+        <form>
+            <select id="game" onchange="change()">
+                <option value="JS1.jpeg">Assassin's Creed</option>
+                <option value="JS2.jpeg">The Division2</option>
+                <option value="JS3.jpeg">Devil May Cry5</option>
+                <option value="JS4.jpeg">For Honor</option>
+                <option value="JS5.jpeg">Sekiro</option>
+            </select>
+        </form>
+    </div>
+    <p align="center">
+        <img src="JS1.jpeg" id="show" width="640" height="360">
+    </p>
+</body>
+</html>

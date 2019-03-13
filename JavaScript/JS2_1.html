@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic function</title>
+    <style type="text/css">
+        #inp{width: 100px; height: 40px; color: red;}
+    </style>
+    <script type="text/javascript">
+        function clickHandler() {
+            alert("Submit sh*t form!");
+            return;
+        }
+    </script>
+</head>
+<body>
+    <form name="form1" method="post" action="">
+        <input id="inp" type="button" name="btn1" value="submit"/>
+    </form>
+    <script type="text/javascript">
+        //document.getElementById('Inp').onclick=function () {return clickHandler();}
+        var btn1=document.getElementById('inp');
+        //btn1.onclick();
+        btn1.addEventListener('click', clickHandler, false); //IE: attachEvent("click",clickHandler)
+        //btn1.setAttribute("onClick", "clickHandler()");
+    </script>
+</body>
+</html>

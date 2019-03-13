@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 drag photo</title>
+    <style type="text/css">
+        #div1, #div2{float: left; width: 200px; height: 200px; margin: 15px; padding: 15px; border: 1px dashed #0066FF;}
+    </style>
+    <script type="text/javascript">
+        function $(id) {
+            return document.getElementById(id);
+        }
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+        function drag(ev) {
+            ev.dataTransfer.setData("Text",ev.target.id);
+        }
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("Text");
+            ev.target.appendChild($(data));
+        }
+    </script>
+</head>
+<body>
+    <h3>Drag figures between two div</h3>
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img id="drag1" width="200" height="200" src="JS5.jpeg" draggable="true" ondragstart="drag(event)"/>
+    </div>
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</body>
+</html>

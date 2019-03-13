@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS function in head</title>
+    <script type="text/javascript">
+        function sum(x, y) {
+            return x+y;
+        }
+        function message() {
+            alert("invoke JS function: 100 + 200 = "+sum(100, 200));
+        }
+    </script>
+</head>
+<body>
+    <h4>Two functions in head</h4>
+    <p>No return: message()</p>
+    <p>Return: sum(x, y)</p>
+    <form>
+        <input name="btnCallJS" type="button" onclick="message();" value="Show the result">
+    </form>
+</body>
+</html>

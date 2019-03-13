@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web worker</title>
+</head>
+<body>
+    <h3>create ten random numbers</h3>
+    <p><output id="result"></output></p>
+    <button onclick="startMyWorker()">Begin to create 10 numbers</button>
+    <button onclick="stopWorker()">Stop</button>
+    <script>
+        var worker;
+        function $(id) {
+            return document.getElementById(id);
+        }
+        function startMyWorker() {
+            if(typeof(worker) !== "undefined"){
+                if(typeof(worker) == "undefined"){
+                    worker = new Worker("JS5_8.js");
+                }
+                worker.onmessage = function (event) {
+                    $("result").innerHTML = event.data;
+                }
+            }
+            else{
+                $("result").innerHTML = "Sorry, your explorer doesn't support web worker";
+            }
+        }
+        function stopWorker() {
+            worker.terminate();
+        }
+    </script>
+</body>
+</html>

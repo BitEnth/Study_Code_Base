@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>innerText, innerHTML</title>
+    <script type="text/javascript">
+        function textGet() {
+            var oDiv=document.getElementById("oDiv");
+            var msg="Use innerText: ";
+            msg += oDiv.innerText;
+            msg += "\nUse innerHTML: ";
+            msg += oDiv.innerHTML;
+            alert(msg);
+        }
+    </script>
+</head>
+<body onload="textGet()">
+    <div id="oDiv">
+        <strong>Web front technique</strong><br/>
+        <b>What the hell</b>
+    </div>
+</body>
+</html>

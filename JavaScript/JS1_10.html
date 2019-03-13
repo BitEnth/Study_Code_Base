@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>N!</title>
+</head>
+<body>
+    <script type="text/javascript">
+        document.write("Partly summary of N!<br/>");
+        var n = prompt("Please input integer: ", '20');
+        for(i=1,sum=0;i<=n;i++){
+            if(i>15){
+                break;
+            }
+            if(i>=1 && i<5){
+                continue;
+            }else{
+                for(var j=1, cj=1;j<=i;j++){
+                    cj=cj*j;
+                }
+                document.write(i+"!="+cj+"<br/>");
+                sum += cj;
+            }
+        }
+        i--;
+        document.write("<a>&Sigma;</a>"+i+"!="+sum);
+    </script>
+</body>
+</html>

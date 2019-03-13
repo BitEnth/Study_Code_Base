@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Method of string</title>
+    <script language="JavaScript" src="JS0_1.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        var str1 = String("Welcome to ");
+        var str2 = new String("this world!");
+        str1 = str1.concat(str2);
+        println(str1);
+        var substr3 = str1.split(" ");
+        for(var i=0;i<substr3.length;i++){
+            print(substr3[i]);
+            print("<br/>");
+        }
+        str1 = str1.toUpperCase();
+        print(str1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IndexedDB1</title>
+    <script language="JavaScript">
+        var request = window.indexedDB.open("My Books", 1);
+        request.onerror = function (event) {
+            alert("Fail to link to database: "+event.target.toString());
+        }
+        request.onupgradeneeded = function (event) {
+            var db = request.result;
+            var store = db.createObjectStore("books", {keyPath: "isbn"});
+            var titleIndex = store.createIndex("by_title", "title", {unique: true});
+            var authorIndex = store.createIndex("by_author", "author");
+            store.put({title: "Computer science", author: "Griet", isbn: "90128347120"});
+            store.put({title: "Java programming", author: "Linus", isbn: "73162901351"});
+            request.onsuccess = function (event) {
+                db = request.result;
+                alert("DataBase link successfully!");
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

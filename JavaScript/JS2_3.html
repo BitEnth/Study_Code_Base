@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The value of return</title>
+    <script language="JavaScript">
+        function showName() {
+            if(document.form1.name1.value == "")
+            {
+                alert("No Input!");
+                return false;
+            }
+            else
+            {
+                alert("Welcome, "+document.form1.name1.value+"!");
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h4>The application of returning value</h4>
+    <form name="form1" action="JS2_2.html" onsubmit="return showName();">
+        Name:<input type="text" name="name1"/>
+        <input type="submit" value="submit"/>
+    </form>
+</body>
+</html>

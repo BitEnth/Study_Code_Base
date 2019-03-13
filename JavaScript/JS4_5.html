@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>window interval</title>
+    <style type="text/css">
+        #myDiv{width: 100%; height: 24px; background-color: #DDFFAA;}
+    </style>
+    <script type="text/javascript">
+        var TimerID;
+        var loop=1; //in order not to start twice at a cycle
+        var dir=1;  // direction of string moving
+        var str_num=0;  //the number of steps belonging to string movement
+        var str="Welcome to web";
+        var str_space="~";
+        function $(id) {
+            return document.getElementById(id);
+        }
+        function startMove() {
+            str_space = "";
+            if(str_num>50 || str_num<0){
+                dir *= -1;
+            }
+            str_num=str_num+dir;
+            for(var i=0;i<str_num;i++){
+                str_space += "~";
+            }
+            $("myDiv").innerHTML="<h3>"+str_space+str+"</h3>";
+        }
+        function MyStart() {
+            if(loop == 1){
+                TimerID = setInterval("startMove();", 100);
+            }
+            loop++;
+        }
+        function MyStop() {
+            clearInterval(TimerID);
+            loop = 1;
+            str_num = 0;
+            dir = 1;
+            str_space = "~";
+            $("myDiv").innerHTML="<h3>"+"Rolling over!"+"</h3>";
+        }
+    </script>
+</head>
+<body>
+    <h3 align="center">Rolling area</h3>
+    <div id="myDiv">Welcome to Ajax!</div>
+    <div style="text-align: center">
+        <p>Click to roll up!</p>
+        <form name="myForm">
+            <input type="button" value="Begin to roll" onclick="MyStart()"/>
+            <input type="button" value="Stop!" onclick="MyStop()"/>
+        </form>
+    </div>
+</body>
+</html>

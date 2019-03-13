@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IndexedDB2</title>
+    <style type="text/css">
+        fieldset{text-align: center; border: 1px dashed #FF0000;}
+        .myBtn{width: 80px; height: 35px; border: 1px dashed #0066FF;}
+    </style>
+    <script language="JavaScript" src="JS5_3.js"></script>
+</head>
+<body onload="createDB('user_info');">
+    <form name="myFrm">
+        <fieldset>
+            <legend align="center">Students' Information</legend>
+            ID number: <input type="text" id="id-num" required/><br/>
+            Name: <input type="text" id="name" required/><br/>
+            Age: <input type="number" id="age" value="20" min="1" required/><br/>
+            Sex: <input type="radio" id="sex-m" value="male"/>Male
+            <input type="radio" id="sex-f" value="female"/>Female<br/>
+            <input type="button" class="myBtn" value="Add date" onclick="addObject()"/>
+            <input type="button" class="myBtn" value="Get date" onclick="getObject()"/>
+            <input type="reset" class="myBtn" value="Reset"/>
+            <input type="button" class="myBtn" value="Delete date" onclick="deleteDB('user_info')"/><br/>
+            <textarea id="display" rows="10" cols="45"></textarea>
+            <textarea id="check_value" cols="30" rows="10"></textarea>
+        </fieldset>
+    </form>
+</body>
+</html>

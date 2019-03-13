@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>localStorage</title>
+    <style type="text/css">
+        div{text-align: center; padding: 20px; border: 10px ridge #005A9C;
+            width: 500px; height: 400px; margin: 0 auto;}
+    </style>
+</head>
+<body>
+    <div>
+        <h3>Games assessment</h3>
+        <img src="JS1.jpeg" border="0" alt="Games" width="300" height="150"><br/>
+        <p id="result"></p>
+        <p>Refresh!</p>
+        <p>Shut down and go on.</p>
+    </div>
+    <input type="button" value="Get tickets" onclick="getTickets()"/>
+    <input type="button" value="Remove tickets" onclick="removeTickets()"/>
+    <script type="text/javascript">
+        var tickets = 0;
+        //var temp;
+        localStorage.setItem(tickets, '0');
+        function getTickets(){
+            if(localStorage.getItem(tickets)){
+                tickets++;
+                localStorage.setItem(tickets, tickets);
+            }
+            else{
+                localStorage.tickets = 1;
+            }
+            document.getElementById("result").innerHTML = "Tickets: "+localStorage.getItem(tickets);
+        }
+        function removeTickets() {
+            localStorage.removeItem(tickets);
+        }
+    </script>
+</body>
+</html>

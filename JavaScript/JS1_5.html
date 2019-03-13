@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var i = 3500, f = 3.5, s = 3.5e3;
+        var o = 0o12, h = 0x12;
+        var sn="90"-0; //"number"-0: string "number" convert to number
+        var a=4;
+        var bol1=("999"===999);
+        document.write("DEC-i: "+i+"<br/>");
+        document.write("DEC_FLOAT-f: "+f+"<br/>");
+        document.write("DEC_SCI-3.5e3: "+s+"<br/>");
+        document.write("OCT-012: "+o+"<br/>");
+        document.write("HEX-0x12: "+h+"<br/>");
+        document.write("str2num: "+sn+"<br/>");
+        var x=a++;
+        document.write("a = "+a+"\tx = "+x+"<br/>");
+        var y=++a;
+        document.write("a = "+a+"\ty = "+y+"<br/>");
+        document.write(bol1+"<br/>");
+        var rs=(a*=5, a+4);
+        document.write("rs = "+rs+"<br/>");
+        document.write(typeof(3.14159));
+    </script>
+</body>
+</html>

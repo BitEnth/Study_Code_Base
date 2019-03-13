@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get or set nodes</title>
+    <style type="text/css">
+        td{text-align: center;}
+    </style>
+    <script type="text/javascript">
+        var bg_begin;
+        function $(id) {
+            return document.getElementById(id);
+        }
+        function getBgcolor() {
+            bg_begin = $("myTable").getAttribute("bgColor");
+        }
+        function randomInt() {
+            var int = Math.floor(Math.random()*256);
+            return int;
+        }
+        function createHexColor() {
+            var rc = randomInt().toString(16);
+            var gc = randomInt().toString(16);
+            var bc = randomInt().toString(16);
+            var color1 = "#"+rc+gc+bc;
+            return color1;
+        }
+        function changeColor() {
+            $("myTable").setAttribute("bgColor", createHexColor());
+        }
+        function restoreColor() {
+            $("myTable").setAttribute("bgColor", bg_begin);
+        }
+    </script>
+</head>
+<body onload="getBgcolor()">
+    <form method="post" action="">
+        <table id="myTable" align="center" border="1" bgcolor="#99cccc" width="500px">
+            <caption>Students' info</caption>
+            <tr>
+                <th>Number</th>
+                <th>Name</th>
+                <th>ID number</th>
+                <th>Major</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Iric</td>
+                <td>129023920</td>
+                <td>Computer Science and technique</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Lee</td>
+                <td>341121908</td>
+                <td>Hotel Manage</td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <input type="button" value="change color" onclick="changeColor()"/>
+                    <input type="button" value="reset color" onclick="restoreColor()"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
