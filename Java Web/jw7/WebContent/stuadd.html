@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add Student Page</title>
+<script type="text/javascript" src="idcheck.js"></script>
+</head>
+<body>
+	<form action="AddStuServe" method="post">
+	Student's ID: <input type="text" name="stuid" onblur="javascript:idCheck(stuid)"/><br/>
+	Student's Name: <input type="text" name="stuname"/><br/>
+	Student's Age: <input type="number" name="stuage"/><br/>
+	Student's Major: <input type="text" name="stumajor"/><br/>
+	<input type="submit" value="Add"/>
+	<input type="button" value="Back" onclick="window.location.href='stufirst.html'"/>
+	</form>
+</body>
+</html>

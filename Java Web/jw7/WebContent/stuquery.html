@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Search for students</title>
+<script type="text/javascript" src="idcheck.js"></script>
+</head>
+<body>
+<form action="QueryStuIDServe" method="post">
+<fieldset>
+<legend>Search by ID</legend>
+	Student's ID: <input type="text" name="stuid" onblur="javascript:idCheck(stuid)"/>
+	<input type="submit" value="Search"/>
+</fieldset>
+</form>
+<form action="QueryStuNameServe" method="post">
+<fieldset>
+<legend>Search by Name</legend>
+	Student's Name: <input type="text" name="stuname"/>
+	<input type="submit" value="Search"/>
+</fieldset>
+</form>
+<input type="button" value="Back" onclick="window.location.href='stufirst.html'"/>
+</body>
+</html>
