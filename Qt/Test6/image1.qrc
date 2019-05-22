@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img1.jpeg</file>
+        <file>20190318100207.gif</file>
+        <file>Baidu.html</file>
+    </qresource>
+</RCC>
